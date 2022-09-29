@@ -9,11 +9,11 @@ public class Main {
                 1,
                 "Mazda",
                 "M5",
-                2010,
+                8, 7, 2010,
                 "green",
                 69999.99,
                 "123456",
-                2015));
+                26, 11, 2015));
         Printer.printWithBrand(arr, "Mazda");
         Printer.printWithBrand(arr, "Mercedes");
         Printer.printWithModelAndExploitationYear(arr,"M5", 4);

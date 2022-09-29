@@ -4,26 +4,27 @@ public class Car {
     private final Integer id;
     private final String brand;
     private final String model;
-    private final Integer mfcYear;
-    private final Integer pchsYear;
+    private final Date mfcYear;
+    private final Date pchsYear;
     private final String color;
     private final Double price;
     private final String regId;
 
     public Car(Integer id,
                String brand, String model,
-               Integer mfcDate,
+               Integer mfcDay, Integer mfcMonth, Integer mfcYear,
                String color,
                Double price,
-               String regId, Integer pchsDate) {
+               String regId,
+               Integer pchsDay, Integer pchsMonth, Integer pchsYear) {
         this.id = id;
         this.brand = brand;
         this.model = model;
-        this.mfcYear = mfcDate;
+        this.mfcYear = new Date(mfcDay, mfcMonth, mfcYear);
         this.color = color;
         this.price = price;
         this.regId = regId;
-        this.pchsYear = pchsDate;
+        this.pchsYear = new Date(pchsDay, pchsMonth, pchsYear);
     }
 
     public Integer getId() {
@@ -35,7 +36,7 @@ public class Car {
     }
 
     public Integer getMfcYear() {
-        return mfcYear;
+        return mfcYear.getYear();
     }
 
     public String getColor() {
@@ -51,7 +52,7 @@ public class Car {
     }
 
     public Integer getPchsYear() {
-        return pchsYear;
+        return pchsYear.getYear();
     }
 
     public String getBrand() {
