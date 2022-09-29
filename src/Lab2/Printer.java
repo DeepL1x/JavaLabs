@@ -2,7 +2,6 @@ package Lab2;
 
 import java.time.Year;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class Printer {
     public static void printWithBrand(ArrayList<Car> arr, String brand) {
@@ -18,7 +17,7 @@ public class Printer {
         System.out.println("Cars with model: " + model + " and exploitation years: " + years);
 
         for (Car i : arr) {
-            if (i.getModel().equals(model) && (Year.now().getValue() - i.getPchsYear()) > years)
+            if (i.getModel().equals(model) && (new Date()).isGreaterByYears(i.getPchsDate(), years))
                 System.out.println(i);
         }
     }

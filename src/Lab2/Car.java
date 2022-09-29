@@ -51,6 +51,10 @@ public class Car {
         return regId;
     }
 
+    public Date getPchsDate(){
+        return pchsYear;
+    }
+
     public Integer getPchsYear() {
         return pchsYear.getYear();
     }
