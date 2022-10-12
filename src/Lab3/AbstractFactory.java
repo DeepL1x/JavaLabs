@@ -1,5 +1,12 @@
 package Lab3;
-
-public interface AbstractFactory<T> {
-    T getFactory();
+public class AbstractFactory  {
+    public static BaseFactory getFactory(String choice){
+        if ("black".equalsIgnoreCase(choice)){
+            return new BlackFactory();
+        }
+        else if ("white".equalsIgnoreCase(choice)){
+            return new WhiteFactory();
+        }
+        return null;
+    }
 }
