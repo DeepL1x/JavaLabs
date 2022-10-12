@@ -8,19 +8,6 @@ public abstract class AbstractTriangle implements Geometric {
     private int x3;
     private int y3;
 
-    /*
-     *Constructor without parameters create right triangle
-     *in the origin of coordinates with legs of len 1.
-     */
-    public AbstractTriangle() {
-        this.x1 = 1;
-        this.y1 = 0;
-        this.x2 = 0;
-        this.y2 = 0;
-        this.x3 = 0;
-        this.y3 = 1;
-    }
-
     public AbstractTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
         this.x1 = x1;
         this.y1 = y1;
