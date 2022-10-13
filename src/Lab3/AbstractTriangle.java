@@ -24,6 +24,8 @@ public abstract class AbstractTriangle implements Geometric {
         this.y2 = y2;
         this.x3 = x3;
         this.y3 = y3;
+        if (!checkProperties())
+            System.out.println("Incorrect input. That's not a triangle!\nTry to change some points.");
     }
 
     public int getX1() {
@@ -87,6 +89,17 @@ public abstract class AbstractTriangle implements Geometric {
         double lengthC = findDistance(x3, y3, x1, y1);
 
         return lengthA+lengthB+lengthC;
+    }
+
+    /*
+     * This method checks if given points make a triangle.
+     * If area positive, then it is triangle.
+     */
+    @Override
+    public boolean checkProperties() {
+        if (getArea() > 0)
+            return true;
+        return false;
     }
 
     private static double findDistance(int x1, int y1, int x2, int y2){

@@ -19,6 +19,8 @@ public abstract class AbstractCircle implements Geometric {
         this.centerX = centerX;
         this.centerY = centerY;
         this.radius = radius;
+        if (!checkProperties())
+            System.out.println("Incorrect input. That's not a circle!\nTry to change radius.");
     }
 
     public int getCenterX() {
@@ -53,5 +55,16 @@ public abstract class AbstractCircle implements Geometric {
     @Override
     public double getPerimeter() {
         return 2*3.14*radius;
+    }
+
+    /*
+     * This method checks if given points make a circle.
+     * If radius is positive, then it's a circle.
+     */
+    @Override
+    public boolean checkProperties() {
+        if (radius > 0)
+            return true;
+        return false;
     }
 }
