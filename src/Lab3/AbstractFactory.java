@@ -1,6 +1,6 @@
 package Lab3;
 
-public class AbstractFactory {
+public abstract class AbstractFactory {
     public static BaseFactory getFactory(String choice){
         if ("black".equalsIgnoreCase(choice)){
             return new BlackFactory();

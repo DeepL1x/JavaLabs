@@ -5,6 +5,16 @@ public abstract class AbstractCircle implements Geometric {
     private int centerY;
     private int radius;
 
+    /*
+     *Constructor without parameters create circle
+     *in the origin of coordinates with radius 1.
+     */
+    public AbstractCircle(){
+        this.centerX = 0;
+        this.centerY = 0;
+        this.radius = 1;
+    }
+
     public AbstractCircle(int centerX, int centerY, int radius){
         this.centerX = centerX;
         this.centerY = centerY;
